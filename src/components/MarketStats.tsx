@@ -110,8 +110,8 @@ const MarketStats: React.FC = () => {
         </HStack>
         <HStack justify="space-between">
           <Badge
-            bg={stats.event.type === 'bull' ? 'rgba(0, 245, 212, 0.2)' : 'rgba(255, 77, 77, 0.2)'}
-            color={stats.event.type === 'bull' ? 'var(--neon-cyan)' : '#ff4d4d'}
+            bg={['bull', 'boom'].includes(stats.event.type) ? 'rgba(0, 245, 212, 0.2)' : 'rgba(255, 77, 77, 0.2)'}
+            color={['bull', 'boom'].includes(stats.event.type) ? 'var(--neon-cyan)' : '#ff4d4d'}
             px={3}
             py={1}
             rounded="md"

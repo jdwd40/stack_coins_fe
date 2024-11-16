@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://api.example.com'; // Replace with your actual API URL
+const API_URL = 'https:jdwd40/com'; // Replace with your actual API URL
 
 const api = axios.create({
   baseURL: API_URL,
@@ -60,9 +60,6 @@ export const logout = () => {
 };
 
 export const getCoinList = async () => {
-  if (useMockData) {
-    return mockCoins;
-  }
   const response = await api.get('/api/coins');
   return response.data;
 };
