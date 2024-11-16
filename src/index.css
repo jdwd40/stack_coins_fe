@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-cyan: #00f5d4;
+  --neon-purple: #9d4edd;
+  --dark-bg: #0a0b0e;
+  --card-bg: #1a1b23;
+  --text-primary: #e2e8f0;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+}
+
+.glass-card {
+  background: rgba(26, 27, 35, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 245, 212, 0.1);
+}
+
+.neon-border {
+  position: relative;
+}
+
+.neon-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 1px solid var(--neon-cyan);
+  box-shadow: 0 0 15px var(--neon-cyan);
+  pointer-events: none;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
